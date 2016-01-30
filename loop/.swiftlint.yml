@@ -1,0 +1,20 @@
+disabled_rules: # rule identifiers to exclude from running
+  - force_cast
+  - force_try
+  - variable_name
+  - variable_name_min_length
+  - statement_position
+  - todo
+
+line_length: 160
+
+excluded: # paths to include during linting.
+  - Carthage
+
+function_body_length:
+  - 300 # warning
+  - 400 # error
+
+type_body_length:
+  - 500 # warning
+  - 600 # error

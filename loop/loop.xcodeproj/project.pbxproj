@@ -12,6 +12,8 @@
 		AA55CD151C4D6A0D0075F586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD131C4D6A0D0075F586 /* Main.storyboard */; };
 		AA55CD171C4D6A0D0075F586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD161C4D6A0D0075F586 /* Assets.xcassets */; };
 		AA55CD1A1C4D6A0D0075F586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */; };
+		AAE7517E1C5DA96B0021C144 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7517C1C5DA96B0021C144 /* Fabric.framework */; };
+		AAE7517F1C5DA96B0021C144 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */; };
 		E289542F1C5D163100C47A5A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E289542E1C5D163100C47A5A /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +25,8 @@
 		AA55CD161C4D6A0D0075F586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA55CD191C4D6A0D0075F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA55CD1B1C4D6A0D0075F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE7517C1C5DA96B0021C144 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E289542E1C5D163100C47A5A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -32,6 +36,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E289542F1C5D163100C47A5A /* SnapKit.framework in Frameworks */,
+				AAE7517F1C5DA96B0021C144 /* Crashlytics.framework in Frameworks */,
+				AAE7517E1C5DA96B0021C144 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +47,8 @@
 		AA55CD031C4D6A0D0075F586 = {
 			isa = PBXGroup;
 			children = (
+				AAE7517C1C5DA96B0021C144 /* Fabric.framework */,
+				AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */,
 				E289542E1C5D163100C47A5A /* SnapKit.framework */,
 				AA55CD0E1C4D6A0D0075F586 /* loop */,
 				AA55CD0D1C4D6A0D0075F586 /* Products */,
@@ -80,6 +88,7 @@
 				AA55CD0A1C4D6A0D0075F586 /* Resources */,
 				E289542D1C5D14CF00C47A5A /* Swiftlint */,
 				E28954301C5D164100C47A5A /* Carthage */,
+				AAE7517B1C5DA94C0021C144 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -138,6 +147,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		AAE7517B1C5DA94C0021C144 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Crashlytics;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 0b32c750b673190823681c6c2142144abeced206 0ea7c11eb53a38bff24f2ebf21fc069c111d3ff9a2cb39bd92b30c4ee0acfa7c";
+		};
 		E289542D1C5D14CF00C47A5A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +314,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = loop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +330,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = loop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

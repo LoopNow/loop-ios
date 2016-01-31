@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AA55CD101C4D6A0D0075F586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */; };
-		AA55CD121C4D6A0D0075F586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CD111C4D6A0D0075F586 /* ViewController.swift */; };
 		AA55CD171C4D6A0D0075F586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD161C4D6A0D0075F586 /* Assets.xcassets */; };
 		AA55CD1A1C4D6A0D0075F586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */; };
+		AAA3ABAC1C5DBD7200D07898 /* LNMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3ABAB1C5DBD7200D07898 /* LNMainViewController.swift */; };
+		AAA3ABB61C5DBECF00D07898 /* LNLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA3ABB41C5DBECF00D07898 /* LNLoginViewController.swift */; };
 		AAE7517E1C5DA96B0021C144 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7517C1C5DA96B0021C144 /* Fabric.framework */; };
 		AAE7517F1C5DA96B0021C144 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */; };
 		AAE751831C5DAACD0021C144 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE751801C5DAACD0021C144 /* TwitterKit.framework */; };
@@ -22,10 +23,11 @@
 /* Begin PBXFileReference section */
 		AA55CD0C1C4D6A0D0075F586 /* loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA55CD111C4D6A0D0075F586 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA55CD161C4D6A0D0075F586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA55CD191C4D6A0D0075F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA55CD1B1C4D6A0D0075F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA3ABAB1C5DBD7200D07898 /* LNMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNMainViewController.swift; sourceTree = "<group>"; };
+		AAA3ABB41C5DBECF00D07898 /* LNLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNLoginViewController.swift; sourceTree = "<group>"; };
 		AAE7517C1C5DA96B0021C144 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		AAE751801C5DAACD0021C144 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -70,10 +72,9 @@
 		AA55CD0E1C4D6A0D0075F586 /* loop */ = {
 			isa = PBXGroup;
 			children = (
-				AAA3AB991C5DAB8F00D07898 /* Views */,
-				AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */,
-				AA55CD161C4D6A0D0075F586 /* Assets.xcassets */,
-				AA55CD1B1C4D6A0D0075F586 /* Info.plist */,
+				AAA3ABB81C5DC17E00D07898 /* Custom Views */,
+				AAA3AB991C5DAB8F00D07898 /* View Controllers */,
+				AAA3ABA91C5DBD4900D07898 /* Extras */,
 			);
 			path = loop;
 			sourceTree = "<group>";
@@ -107,13 +108,55 @@
 			name = SnapKit;
 			sourceTree = "<group>";
 		};
-		AAA3AB991C5DAB8F00D07898 /* Views */ = {
+		AAA3AB991C5DAB8F00D07898 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA55CD111C4D6A0D0075F586 /* ViewController.swift */,
-				AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */,
+				AAA3ABAD1C5DBDA000D07898 /* Sign In */,
+				AAA3ABAA1C5DBD6000D07898 /* Navigation */,
 			);
-			name = Views;
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AAA3ABA91C5DBD4900D07898 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */,
+				AA55CD161C4D6A0D0075F586 /* Assets.xcassets */,
+				AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */,
+				AA55CD1B1C4D6A0D0075F586 /* Info.plist */,
+			);
+			name = Extras;
+			sourceTree = "<group>";
+		};
+		AAA3ABAA1C5DBD6000D07898 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3ABAB1C5DBD7200D07898 /* LNMainViewController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		AAA3ABAD1C5DBDA000D07898 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3ABB41C5DBECF00D07898 /* LNLoginViewController.swift */,
+			);
+			name = "Sign In";
+			sourceTree = "<group>";
+		};
+		AAA3ABB81C5DC17E00D07898 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3ABBA1C5DC1CC00D07898 /* Twitter Login Button */,
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		AAA3ABBA1C5DC1CC00D07898 /* Twitter Login Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Twitter Login Button";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA55CD121C4D6A0D0075F586 /* ViewController.swift in Sources */,
 				AA55CD101C4D6A0D0075F586 /* AppDelegate.swift in Sources */,
+				AAA3ABB61C5DBECF00D07898 /* LNLoginViewController.swift in Sources */,
+				AAA3ABAC1C5DBD7200D07898 /* LNMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

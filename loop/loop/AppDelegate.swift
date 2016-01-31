@@ -21,11 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self, Twitter.self])
 
-        self.viewController = ViewController()
-
+        let viewController = LNMainViewController()
+        let navigationController = UINavigationController(rootViewController: viewController)
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()
-        self.window?.rootViewController = self.viewController
+        self.window?.rootViewController = navigationController
+        self.viewController = viewController
         self.window?.makeKeyAndVisible()
 
         return true

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA55CD101C4D6A0D0075F586 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */; };
 		AA55CD121C4D6A0D0075F586 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA55CD111C4D6A0D0075F586 /* ViewController.swift */; };
-		AA55CD151C4D6A0D0075F586 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD131C4D6A0D0075F586 /* Main.storyboard */; };
 		AA55CD171C4D6A0D0075F586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD161C4D6A0D0075F586 /* Assets.xcassets */; };
 		AA55CD1A1C4D6A0D0075F586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */; };
 		AAE7517E1C5DA96B0021C144 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE7517C1C5DA96B0021C144 /* Fabric.framework */; };
@@ -24,7 +23,6 @@
 		AA55CD0C1C4D6A0D0075F586 /* loop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA55CD111C4D6A0D0075F586 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA55CD141C4D6A0D0075F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA55CD161C4D6A0D0075F586 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA55CD191C4D6A0D0075F586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA55CD1B1C4D6A0D0075F586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,12 +53,7 @@
 		AA55CD031C4D6A0D0075F586 = {
 			isa = PBXGroup;
 			children = (
-				AAE751801C5DAACD0021C144 /* TwitterKit.framework */,
-				AAE751811C5DAACD0021C144 /* TwitterKitResources.bundle */,
-				AAE751821C5DAACD0021C144 /* TwitterCore.framework */,
-				AAE7517C1C5DA96B0021C144 /* Fabric.framework */,
-				AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */,
-				E289542E1C5D163100C47A5A /* SnapKit.framework */,
+				AAA3AB961C5DAB6C00D07898 /* Frameworks */,
 				AA55CD0E1C4D6A0D0075F586 /* loop */,
 				AA55CD0D1C4D6A0D0075F586 /* Products */,
 			);
@@ -77,14 +70,50 @@
 		AA55CD0E1C4D6A0D0075F586 /* loop */ = {
 			isa = PBXGroup;
 			children = (
+				AAA3AB991C5DAB8F00D07898 /* Views */,
 				AA55CD0F1C4D6A0D0075F586 /* AppDelegate.swift */,
-				AA55CD111C4D6A0D0075F586 /* ViewController.swift */,
-				AA55CD131C4D6A0D0075F586 /* Main.storyboard */,
 				AA55CD161C4D6A0D0075F586 /* Assets.xcassets */,
-				AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */,
 				AA55CD1B1C4D6A0D0075F586 /* Info.plist */,
 			);
 			path = loop;
+			sourceTree = "<group>";
+		};
+		AAA3AB961C5DAB6C00D07898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAA3AB981C5DAB8300D07898 /* SnapKit */,
+				AAA3AB971C5DAB7C00D07898 /* Fabric */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAA3AB971C5DAB7C00D07898 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				AAE751801C5DAACD0021C144 /* TwitterKit.framework */,
+				AAE751811C5DAACD0021C144 /* TwitterKitResources.bundle */,
+				AAE751821C5DAACD0021C144 /* TwitterCore.framework */,
+				AAE7517C1C5DA96B0021C144 /* Fabric.framework */,
+				AAE7517D1C5DA96B0021C144 /* Crashlytics.framework */,
+			);
+			name = Fabric;
+			sourceTree = "<group>";
+		};
+		AAA3AB981C5DAB8300D07898 /* SnapKit */ = {
+			isa = PBXGroup;
+			children = (
+				E289542E1C5D163100C47A5A /* SnapKit.framework */,
+			);
+			name = SnapKit;
+			sourceTree = "<group>";
+		};
+		AAA3AB991C5DAB8F00D07898 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA55CD111C4D6A0D0075F586 /* ViewController.swift */,
+				AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +181,6 @@
 				AAE751841C5DAACD0021C144 /* TwitterKitResources.bundle in Resources */,
 				AA55CD1A1C4D6A0D0075F586 /* LaunchScreen.storyboard in Resources */,
 				AA55CD171C4D6A0D0075F586 /* Assets.xcassets in Resources */,
-				AA55CD151C4D6A0D0075F586 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,14 +245,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AA55CD131C4D6A0D0075F586 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA55CD141C4D6A0D0075F586 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

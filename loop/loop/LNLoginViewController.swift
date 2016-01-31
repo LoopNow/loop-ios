@@ -33,7 +33,13 @@ extension LNLoginViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.twitterLoginButton)
+    }
+}
 
+// MARK: - SnapKit Layout
+
+extension LNLoginViewController {
+    func setTwitterLoginButtonConstraints() {
         twitterLoginButton.snp_makeConstraints() { (make) -> Void in
             make.bottom.equalTo(self.view).offset(-20.0)
             make.width.equalTo(Constants.buttonWidth)

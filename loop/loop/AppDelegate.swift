@@ -22,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self, Twitter.self])
 
         self.viewController = ViewController()
+        viewController?.view.snp_makeConstraints { make in
+            make.width.equalTo(UIScreen.mainScreen().bounds.width)
+            make.height.equalTo(UIScreen.mainScreen().bounds.height)
+        }
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window?.backgroundColor = UIColor.whiteColor()

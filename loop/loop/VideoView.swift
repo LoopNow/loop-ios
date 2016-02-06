@@ -3,7 +3,7 @@
 //  loop
 //
 //  Created by Ahmed Elkady on 2016-02-06.
-//  Copyright © 2016 Rajul Arora. All rights reserved.
+//  Copyright © 2016 LoopNow. All rights reserved.
 //
 
 import UIKit

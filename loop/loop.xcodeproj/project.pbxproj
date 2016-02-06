@@ -147,7 +147,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Rajul Arora";
+				ORGANIZATIONNAME = LoopNow;
 				TargetAttributes = {
 					AA55CD0B1C4D6A0D0075F586 = {
 						CreatedOnToolsVersion = 7.2;
@@ -350,7 +350,7 @@
 				);
 				INFOPLIST_FILE = loop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rajularora.loop;
+				PRODUCT_BUNDLE_IDENTIFIER = loopnow.loop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -366,7 +366,7 @@
 				);
 				INFOPLIST_FILE = loop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rajularora.loop;
+				PRODUCT_BUNDLE_IDENTIFIER = loopnow.loop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

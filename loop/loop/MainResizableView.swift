@@ -28,7 +28,6 @@ class MainResizableView: UIView {
             make.width.equalTo(self.snp_width).multipliedBy(0.2)
             make.height.equalTo(self.snp_height).multipliedBy(0.2)
         }
-        closeCornerView.addTarget(self, action: "closeView:", forControlEvents: .TouchUpInside)
         let pan = UIPanGestureRecognizer(target:self, action:"pan:")
         pan.maximumNumberOfTouches = 1
         pan.minimumNumberOfTouches = 1
@@ -71,10 +70,5 @@ class MainResizableView: UIView {
         }
 
         return subview
-    }
-
-    func closeView(sender: UIButton) {
-        NSLog("yo")
-        removeFromSuperview()
     }
 }

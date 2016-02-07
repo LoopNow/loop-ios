@@ -14,10 +14,14 @@ class CloseCornerView: UIButton {
         setTitleColor(UIColor.grayColor(), forState:  .Highlighted)
         titleLabel?.font =  UIFont(name: "HelveticaNeue-Thin", size: 30)
         opaque = false
-
+        addTarget(self, action: "closeView:", forControlEvents: .TouchUpInside)
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func closeView(sender: UIButton) {
+        superview?.removeFromSuperview()
     }
 }

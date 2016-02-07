@@ -1,7 +1,4 @@
 //
-//  AppDelegate.swift
-//  loop
-//
 //  Created by Rajul Arora on 2016-01-18.
 //  Copyright © 2016 LoopNow. All rights reserved.
 //

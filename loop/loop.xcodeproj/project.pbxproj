@@ -19,7 +19,7 @@
 		E20BBEE91C65BAA000546BFB /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BBEE81C65BAA000546BFB /* VideoView.swift */; };
 		E289542F1C5D163100C47A5A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E289542E1C5D163100C47A5A /* SnapKit.framework */; };
 		E28954341C5F36D100C47A5A /* MainResizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28954331C5F36D100C47A5A /* MainResizableView.swift */; };
-		E28954361C5F36F300C47A5A /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28954351C5F36F300C47A5A /* CornerView.swift */; };
+		E28954361C5F36F300C47A5A /* CloseCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28954351C5F36F300C47A5A /* CloseCornerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		E20BBEE81C65BAA000546BFB /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		E289542E1C5D163100C47A5A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E28954331C5F36D100C47A5A /* MainResizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainResizableView.swift; sourceTree = "<group>"; };
-		E28954351C5F36F300C47A5A /* CornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		E28954351C5F36F300C47A5A /* CloseCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseCornerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E28954331C5F36D100C47A5A /* MainResizableView.swift */,
-				E28954351C5F36F300C47A5A /* CornerView.swift */,
+				E28954351C5F36F300C47A5A /* CloseCornerView.swift */,
 				E20BBEE81C65BAA000546BFB /* VideoView.swift */,
 			);
 			name = ResizableViews;
@@ -249,7 +249,7 @@
 				E20BBEE91C65BAA000546BFB /* VideoView.swift in Sources */,
 				AA55CD121C4D6A0D0075F586 /* ViewController.swift in Sources */,
 				AA55CD101C4D6A0D0075F586 /* AppDelegate.swift in Sources */,
-				E28954361C5F36F300C47A5A /* CornerView.swift in Sources */,
+				E28954361C5F36F300C47A5A /* CloseCornerView.swift in Sources */,
 				E28954341C5F36D100C47A5A /* MainResizableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,19 +12,44 @@ import SnapKit
 class MainResizableView: UIView {
 
     var videoView: VideoView
+    var closeCornerView: CornerView
 
     init() {
         videoView = VideoView()
-        //let cornerView = CornerView()
+        closeCornerView = CornerView()
         super.init(frame: .zero)
         addSubview(videoView)
-        //addSubview(cornerView)
+        addSubview(closeCornerView)
         videoView.snp_makeConstraints { make in
             make.center.equalTo(self.snp_center)
             make.width.equalTo(self.snp_width).multipliedBy(0.9)
             make.height.equalTo(self.snp_height).multipliedBy(0.9)
         }
-
+        closeCornerView.snp_makeConstraints { make in
+            make.left.equalTo(videoView.snp_left)
+            make.top.equalTo(videoView.snp_top)
+            make.width.equalTo(self.snp_width).multipliedBy(0.2)
+            make.height.equalTo(self.snp_height).multipliedBy(0.2)
+        }
+        let close = UIButton()
+        closeCornerView.addSubview(close)
+        closeCornerView.bringSubviewToFront(close)
+        close.snp_makeConstraints { make in
+            make.width.equalTo(closeCornerView.snp_width)
+            make.height.equalTo(closeCornerView.snp_height)
+            make.center.equalTo(closeCornerView.snp_center)
+        }
+        close.setTitle("x", forState: .Normal)
+        close.setTitleColor(UIColor.blackColor(), forState:  .Normal)
+        close.setTitleColor(UIColor.grayColor(), forState:  .Highlighted)
+        close.titleLabel?.font =  UIFont(name: "HelveticaNeue-Thin", size: 20)
+        close.addTarget(self, action: "closeView:", forControlEvents: .TouchUpInside)
+        //        UILabel *yourLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 20)];
+        //
+        //        [yourLabel setTextColor:[UIColor blackColor]];
+        //        [yourLabel setBackgroundColor:[UIColor clearColor]];
+        //        [yourLabel setFont:[UIFont fontWithName: @"Trebuchet MS" size: 14.0f]];
+        //        [yourSuperView addSubview:yourLabel];
         let pan = UIPanGestureRecognizer(target:self, action:"pan:")
         pan.maximumNumberOfTouches = 1
         pan.minimumNumberOfTouches = 1
@@ -62,10 +87,15 @@ class MainResizableView: UIView {
 
     override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
         let subview = super.hitTest(point, withEvent: event)
-        if subview == videoView {
-            return subview
+        if subview == self {
+            return nil
         }
 
-        return nil
+        return subview
+    }
+
+    func closeView(sender: UIButton) {
+        NSLog("yo")
+        removeFromSuperview()
     }
 }

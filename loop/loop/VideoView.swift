@@ -11,10 +11,11 @@ import UIKit
 class VideoView: UIView {
 
     init() {
-        super.init(frame: CGRect(x: 100, y: 200, width: 200, height: 200))
-        self.backgroundColor = UIColor.blueColor()
-        self.opaque = false
-        self.layer.borderWidth=2
+        super.init(frame: .zero)
+        backgroundColor = UIColor.blueColor()
+        opaque = false
+        layer.borderWidth = 2
+        layer.cornerRadius = 20
     }
 
     required init?(coder aDecoder: NSCoder) {

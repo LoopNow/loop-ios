@@ -10,11 +10,13 @@ class MainResizableView: UIView {
 
     var videoView: VideoView
     var closeCornerView: CloseCornerView
+    let screenWidth = UIScreen.mainScreen().bounds.width
+    let screenHeight = UIScreen.mainScreen().bounds.height
 
     init() {
         videoView = VideoView()
         closeCornerView = CloseCornerView()
-        super.init(frame: .zero)
+        super.init(frame: CGRect(x: 50, y: 50, width: screenWidth * 0.4, height: screenHeight * 0.4))
         addSubview(videoView)
         addSubview(closeCornerView)
         videoView.snp_makeConstraints { make in
@@ -48,8 +50,8 @@ class MainResizableView: UIView {
                 let newY = view.center.y + translation.y
                 let lowX = self.frame.width/2
                 let lowY = self.frame.height/2
-                let highX = UIScreen.mainScreen().bounds.width - lowX
-                let highY = UIScreen.mainScreen().bounds.height - lowY
+                let highX = screenWidth - lowX
+                let highY = screenHeight - lowY
                 if newX > lowX && newY > lowY && newX < highX && newY < highY {
                     view.center = CGPoint(x: newX, y: newY)
                     recognizer.setTranslation(CGPoint(x: 0, y: 0), inView: self.superview)

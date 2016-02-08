@@ -12,7 +12,7 @@ class CloseCornerView: UIButton {
         setTitle("x", forState: .Normal)
         setTitleColor(UIColor.blackColor(), forState:  .Normal)
         setTitleColor(UIColor.grayColor(), forState:  .Highlighted)
-        titleLabel?.font =  UIFont(name: "HelveticaNeue-Thin", size: 30)
+        titleLabel?.font =  UIFont(name: "HelveticaNeue-Thin", size: 20)
         opaque = false
         addTarget(self, action: "closeView:", forControlEvents: .TouchUpInside)
     }

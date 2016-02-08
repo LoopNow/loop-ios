@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         plus.setTitleColor(UIColor.blackColor(), forState:  .Normal)
         plus.setTitleColor(UIColor.grayColor(), forState:  .Highlighted)
         plus.titleLabel?.font =  UIFont(name: "HelveticaNeue-Thin", size: 70)
-        plus.addTarget(self, action: "addResizableViewController:", forControlEvents: .TouchUpInside)
+        plus.addTarget(self, action: "addResizableView:", forControlEvents: .TouchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,15 +30,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func addResizableViewController(sender: UIButton) {
-        NSLog("Yo","Yo")
+    func addResizableView(sender: UIButton) {
         let resizableView = MainResizableView()
         view.addSubview(resizableView)
-        resizableView.snp_makeConstraints { make in
-            make.top.equalTo(view.snp_top).offset(50)
-            make.left.equalTo(view.snp_left).offset(50)
-            make.width.equalTo(view.snp_width).multipliedBy(0.4)
-            make.height.equalTo(view.snp_width).multipliedBy(0.4)
-        }
     }
 }

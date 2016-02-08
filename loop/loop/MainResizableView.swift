@@ -48,14 +48,8 @@ class MainResizableView: UIView {
             if let view = recognizer.view {
                 let newX = view.center.x + translation.x
                 let newY = view.center.y + translation.y
-                let lowX = self.frame.width/2
-                let lowY = self.frame.height/2
-                let highX = screenWidth - lowX
-                let highY = screenHeight - lowY
-                if newX > lowX && newY > lowY && newX < highX && newY < highY {
-                    view.center = CGPoint(x: newX, y: newY)
-                    recognizer.setTranslation(CGPoint(x: 0, y: 0), inView: self.superview)
-                }
+                view.center = CGPoint(x: newX, y: newY)
+                recognizer.setTranslation(CGPoint(x: 0, y: 0), inView: self.superview)
             }
         }
     }
@@ -63,14 +57,5 @@ class MainResizableView: UIView {
     func scale(sender: UIPinchGestureRecognizer) {
         self.transform = CGAffineTransformScale(self.transform, sender.scale, sender.scale)
         sender.scale = 1
-    }
-
-    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
-        let subview = super.hitTest(point, withEvent: event)
-        if subview == self {
-            return nil
-        }
-
-        return subview
     }
 }

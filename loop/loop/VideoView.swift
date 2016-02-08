@@ -9,7 +9,7 @@ class VideoView: UIView {
 
     init() {
         super.init(frame: .zero)
-        backgroundColor = UIColor.blueColor()
+        backgroundColor = UIColor.randomColor()
         opaque = false
         layer.borderWidth = 2
         layer.cornerRadius = 20

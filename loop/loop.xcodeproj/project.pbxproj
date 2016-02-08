@@ -17,6 +17,7 @@
 		AAE751841C5DAACD0021C144 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAE751811C5DAACD0021C144 /* TwitterKitResources.bundle */; };
 		AAE751851C5DAACD0021C144 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE751821C5DAACD0021C144 /* TwitterCore.framework */; };
 		E20BBEE91C65BAA000546BFB /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BBEE81C65BAA000546BFB /* VideoView.swift */; };
+		E20BBEEE1C68196800546BFB /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20BBEED1C68196800546BFB /* UIColorExtensions.swift */; };
 		E289542F1C5D163100C47A5A /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E289542E1C5D163100C47A5A /* SnapKit.framework */; };
 		E28954341C5F36D100C47A5A /* MainResizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28954331C5F36D100C47A5A /* MainResizableView.swift */; };
 		E28954361C5F36F300C47A5A /* CloseCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28954351C5F36F300C47A5A /* CloseCornerView.swift */; };
@@ -35,6 +36,7 @@
 		AAE751811C5DAACD0021C144 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		AAE751821C5DAACD0021C144 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		E20BBEE81C65BAA000546BFB /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		E20BBEED1C68196800546BFB /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		E289542E1C5D163100C47A5A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		E28954331C5F36D100C47A5A /* MainResizableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainResizableView.swift; sourceTree = "<group>"; };
 		E28954351C5F36F300C47A5A /* CloseCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseCornerView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		AA55CD0E1C4D6A0D0075F586 /* loop */ = {
 			isa = PBXGroup;
 			children = (
+				E20BBEEC1C68195A00546BFB /* Extensions */,
 				AA55CD111C4D6A0D0075F586 /* ViewController.swift */,
 				AA55CD181C4D6A0D0075F586 /* LaunchScreen.storyboard */,
 				AAA3AB991C5DAB8F00D07898 /* ResizableViews */,
@@ -123,6 +126,14 @@
 				E20BBEE81C65BAA000546BFB /* VideoView.swift */,
 			);
 			name = ResizableViews;
+			sourceTree = "<group>";
+		};
+		E20BBEEC1C68195A00546BFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E20BBEED1C68196800546BFB /* UIColorExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +260,7 @@
 				E20BBEE91C65BAA000546BFB /* VideoView.swift in Sources */,
 				AA55CD121C4D6A0D0075F586 /* ViewController.swift in Sources */,
 				AA55CD101C4D6A0D0075F586 /* AppDelegate.swift in Sources */,
+				E20BBEEE1C68196800546BFB /* UIColorExtensions.swift in Sources */,
 				E28954361C5F36F300C47A5A /* CloseCornerView.swift in Sources */,
 				E28954341C5F36D100C47A5A /* MainResizableView.swift in Sources */,
 			);
